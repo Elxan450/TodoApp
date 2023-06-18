@@ -1,0 +1,22 @@
+{% extends 'todoapp/base.html' %}
+
+{% block links %}
+
+{% endblock %}
+
+{% block title %} <title>Update Task</title> {% endblock %}
+
+{% block content %} 
+    <h3>Update Task</h3>
+
+    <form method="POST" action="">
+        {% csrf_token %}
+        <div>
+            {{form.text}}
+        </div>
+        <div>
+            <p>Complete?</p>{{form.complete}}
+        </div>
+        <input type="submit" name="Update Task">
+    </form>
+{% endblock %}
